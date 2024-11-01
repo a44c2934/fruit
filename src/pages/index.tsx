@@ -4,6 +4,7 @@ import Container from "@/components/Layout/Container";
 import Main from "@/components/Layout/Main";
 import Menu from "@/components/Layout/Menu";
 import { FruitVegetable, IFruitVegetableItem } from "@/utils/data";
+import Link from "next/link";
 import { useRef, useState } from "react";
 interface IData {
   default: IFruitVegetableItem[],
@@ -66,6 +67,9 @@ export default function Home() {
             onClick={() => onClickFruitVegetable(item)}
           />
         ))}
+        <Link href={"/department"}>
+          Department
+        </Link>
       </Menu>
       <Main>
         <Box title="Fruit">
